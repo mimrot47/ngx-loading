@@ -1,5 +1,5 @@
 // 🧩 ngx-loading-config.ts
-import { InjectionToken } from '@angular/core';
+
 // Use a strongly typed enum for better IntelliSense and safety
 export enum NgxLoadingAnimationTypes {
   ChasingDots = 'chasing-dots',
@@ -14,7 +14,6 @@ export enum NgxLoadingAnimationTypes {
   ThreeBounce = 'three-bounce',
   WanderingCubes = 'wandering-cubes',
 }
-
 
 // Strongly typed interface for configuration
 export interface INgxLoadingConfig {
@@ -54,7 +53,3 @@ export class NgxLoadingConfig implements INgxLoadingConfig {
 
 // ✅ Constant export for template bindings (optional)
 export const ngxLoadingAnimationTypes = NgxLoadingAnimationTypes;
-
-export const NGX_LOADING_CONFIG = new InjectionToken<INgxLoadingConfig>(
-  'NGX_LOADING_CONFIG'
-)
