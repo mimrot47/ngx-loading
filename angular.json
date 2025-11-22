@@ -3,5 +3,31 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "ngx-loading": {
+      "projectType": "library",
+      "root": "projects/ngx-loading",
+      "sourceRoot": "projects/ngx-loading/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-loading/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-loading/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+            "tsConfig": "projects/ngx-loading/tsconfig.spec.json"
+          }
+        }
+      }
+    }
   }
 }
